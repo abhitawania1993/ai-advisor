@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Financial Advisor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        input, button { margin: 10px 0; padding: 10px; width: 80%; }
+        .result { font-size: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Your Net Worth with AI</h1>
+        <p>Get real-time insights and smart financial planning.</p>
+        
+        <h3>Net Worth Calculator</h3>
+        <input type="number" id="assets" placeholder="Enter your total assets (₹)">
+        <input type="number" id="liabilities" placeholder="Enter your total liabilities (₹)">
+        <button onclick="calculateNetWorth()">Calculate</button>
+        <p class="result" id="netWorthResult"></p>
+    </div>
+
+    <script>
+        function calculateNetWorth() {
+            let assets = parseFloat(document.getElementById('assets').value) || 0;
+            let liabilities = parseFloat(document.getElementById('liabilities').value) || 0;
+            let netWorth = assets - liabilities;
+            document.getElementById('netWorthResult').innerText = "Your Net Worth: ₹" + netWorth.toLocaleString();
+        }
+    </script>
+</body>
+</html>
