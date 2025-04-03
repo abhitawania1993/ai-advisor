@@ -3,32 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Powered Financial Advisor</title>
+    <title>Exclusive Wealth Management</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
-        .container { max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
-        input, button { margin: 10px 0; padding: 10px; width: 80%; }
-        .result { font-size: 20px; margin-top: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .calculator input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .calculator button {
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Track Your Net Worth with AI</h1>
-        <p>Get real-time insights and smart financial planning.</p>
+        <h1>Exclusive Wealth Management for HNIs</h1>
+        <p>Track your net worth, investments, and financial health with AI-powered insights.</p>
         
-        <h3>Net Worth Calculator</h3>
-        <input type="number" id="assets" placeholder="Enter your total assets (₹)">
-        <input type="number" id="liabilities" placeholder="Enter your total liabilities (₹)">
-        <button onclick="calculateNetWorth()">Calculate</button>
-        <p class="result" id="netWorthResult"></p>
+        <h2>Net Worth Calculator</h2>
+        <div class="calculator">
+            <input type="number" id="assets" placeholder="Total Assets (INR)">
+            <input type="number" id="liabilities" placeholder="Total Liabilities (INR)">
+            <button onclick="calculateNetWorth()">Calculate</button>
+            <h3 id="netWorthResult"></h3>
+        </div>
+        
+        <a href="#" class="cta-button">Request Private Access</a>
     </div>
 
     <script>
         function calculateNetWorth() {
-            let assets = parseFloat(document.getElementById('assets').value) || 0;
-            let liabilities = parseFloat(document.getElementById('liabilities').value) || 0;
+            let assets = document.getElementById("assets").value || 0;
+            let liabilities = document.getElementById("liabilities").value || 0;
             let netWorth = assets - liabilities;
-            document.getElementById('netWorthResult').innerText = "Your Net Worth: ₹" + netWorth.toLocaleString();
+            document.getElementById("netWorthResult").innerText = "Your Net Worth: INR " + netWorth.toLocaleString();
         }
     </script>
 </body>
